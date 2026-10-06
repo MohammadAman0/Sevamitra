@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Service - SevaMitra</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>SevaMitra</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="booking.html">Book a Service</a>
+    </nav>
+</header>
+
+<main>
+
+<section>
+    <h2>Book a Service</h2>
+
+    <p>
+        Tell us what work you need. Our team will contact you
+        and arrange a suitable service professional.
+    </p>
+
+    <form>
+
+        <div>
+            <label>Your Name</label><br>
+            <input type="text" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Mobile Number</label><br>
+            <input type="tel" name="mobile" placeholder="Enter mobile number" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Select Service</label><br>
+
+            <select name="service" required>
+                <option value="">Select a service</option>
+                <option>Plumber</option>
+                <option>Electrician</option>
+                <option>Carpenter</option>
+                <option>Home Cleaning</option>
+                <option>Bathroom Cleaning</option>
+                <option>Laundry</option>
+                <option>AC Repair</option>
+                <option>Appliance Repair</option>
+                <option>Other Home Service</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Describe Your Work</label><br>
+            <textarea
+                name="description"
+                rows="5"
+                placeholder="Example: Tap is leaking..."
+                required>
+            </textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Service Address</label><br>
+            <textarea
+                name="address"
+                rows="4"
+                placeholder="Enter your complete address"
+                required>
+            </textarea>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Preferred Date & Time</label><br>
+            <input type="datetime-local" name="preferred_time" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Approximate Duration</label><br>
+
+            <select name="duration">
+                <option>Not sure</option>
+                <option>Less than 1 hour</option>
+                <option>1–2 hours</option>
+                <option>2–4 hours</option>
+                <option>More than 4 hours</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Expected Budget (₹)</label><br>
+            <input
+                type="number"
+                name="budget"
+                min="100"
+                placeholder="Enter your expected budget">
+        </div>
+
+        <br>
+
+        <div>
+            <label>Upload Problem Photo (Optional)</label><br>
+            <input
+                type="file"
+                name="photo"
+                accept="image/*">
+        </div>
+
+        <br>
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 SevaMitra. All rights reserved.</p>
+</footer>
+<script type="module" src="booking.js"></script>
+</body>
+</html>
