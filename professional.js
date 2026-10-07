@@ -23,22 +23,21 @@ form.addEventListener("submit", async (event) => {
 
     try {
 
-        await addDoc(collection(db, "professionalApplications"), {
-
-            name: name,
-            mobile: mobile,
-            email: email,
-            service: service,
-            experience: experience,
-            city: city,
-            address: address,
-            skills: skills,
-
-            status: "Pending",
-
-            createdAt: serverTimestamp()
-
-        });
+        await addDoc(
+            collection(db, "professionalApplications"),
+            {
+                name: name,
+                mobile: mobile,
+                email: email,
+                service: service,
+                experience: experience,
+                city: city,
+                address: address,
+                skills: skills,
+                status: "Pending",
+                createdAt: serverTimestamp()
+            }
+        );
 
         alert("Registration submitted successfully! 🎉");
 
@@ -46,7 +45,10 @@ form.addEventListener("submit", async (event) => {
 
     } catch (error) {
 
-        console.error("Professional registration error:", error);
+        console.error(
+            "Professional registration error:",
+            error
+        );
 
         alert(
             "Registration failed!\n\n" +
