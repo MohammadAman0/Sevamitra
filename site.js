@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const loader = document.getElementById("sevaLoader");
 
@@ -6,28 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Loader sirf first website visit/open par show hoga
-    const alreadyVisited = sessionStorage.getItem("sevaMitraVisited");
+    // Page completely loaded hone ke baad loader hide karo
+    window.addEventListener("load", function () {
 
-    if (alreadyVisited) {
-
-        loader.classList.add("loader-hidden");
-
-        return;
-
-    }
-
-    // First visit
-    window.addEventListener("load", () => {
-
-        setTimeout(() => {
+        setTimeout(function () {
 
             loader.classList.add("loader-hidden");
-
-            sessionStorage.setItem(
-                "sevaMitraVisited",
-                "true"
-            );
 
         }, 700);
 
