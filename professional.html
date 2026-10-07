@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Professional Registration - SevaMitra</title>
@@ -13,23 +15,24 @@
 
 <header>
     <h1>SevaMitra</h1>
-    <p>Professional Registration</p>
+    <p>Join as a Professional</p>
 </header>
 
 <main>
 
     <section class="booking-container">
 
-        <h2>Join as a Professional</h2>
+        <h2>Professional Registration</h2>
 
         <p>
-            Register yourself as a service professional.
-            Your profile will be reviewed by SevaMitra Admin.
+            Register with SevaMitra and provide your services
+            to customers.
         </p>
 
         <form id="professionalForm">
 
             <label>Full Name</label>
+
             <input
                 type="text"
                 name="name"
@@ -38,6 +41,7 @@
             >
 
             <label>Mobile Number</label>
+
             <input
                 type="tel"
                 name="mobile"
@@ -46,6 +50,7 @@
             >
 
             <label>Email</label>
+
             <input
                 type="email"
                 name="email"
@@ -54,19 +59,49 @@
             >
 
             <label>Service Category</label>
+
             <select name="service" required>
-                <option value="">Select Service</option>
-                <option value="Electrician">Electrician</option>
-                <option value="Plumber">Plumber</option>
-                <option value="Carpenter">Carpenter</option>
-                <option value="AC Repair">AC Repair</option>
-                <option value="Painter">Painter</option>
-                <option value="Cleaning">Cleaning</option>
-                <option value="Appliance Repair">Appliance Repair</option>
-                <option value="Other">Other</option>
+
+                <option value="">
+                    Select Service
+                </option>
+
+                <option value="Electrician">
+                    Electrician
+                </option>
+
+                <option value="Plumber">
+                    Plumber
+                </option>
+
+                <option value="Carpenter">
+                    Carpenter
+                </option>
+
+                <option value="AC Repair">
+                    AC Repair
+                </option>
+
+                <option value="Painter">
+                    Painter
+                </option>
+
+                <option value="Cleaning">
+                    Cleaning
+                </option>
+
+                <option value="Appliance Repair">
+                    Appliance Repair
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
             </select>
 
             <label>Experience</label>
+
             <input
                 type="number"
                 name="experience"
@@ -76,14 +111,16 @@
             >
 
             <label>City</label>
+
             <input
                 type="text"
                 name="city"
-                placeholder="Enter city"
+                placeholder="Enter your city"
                 required
             >
 
             <label>Address</label>
+
             <textarea
                 name="address"
                 placeholder="Enter your complete address"
@@ -91,9 +128,10 @@
             ></textarea>
 
             <label>Skills</label>
+
             <textarea
                 name="skills"
-                placeholder="Example: Wiring, Fan repair, Switch repair"
+                placeholder="Example: Fan repair, wiring, switch repair"
                 required
             ></textarea>
 
@@ -110,4 +148,5 @@
 <script type="module" src="professional.js"></script>
 
 </body>
+
 </html>
