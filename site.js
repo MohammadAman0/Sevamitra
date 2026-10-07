@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const loader = document.getElementById("sevaLoader");
@@ -6,15 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Page completely loaded hone ke baad loader hide karo
-    window.addEventListener("load", function () {
+    function hideLoader() {
+        loader.classList.add("loader-hidden");
+    }
 
-        setTimeout(function () {
-
-            loader.classList.add("loader-hidden");
-
-        }, 700);
-
-    });
+    // Hide loader after the page has loaded.
+    if (document.readyState === "complete") {
+        setTimeout(hideLoader, 700);
+    } else {
+        window.addEventListener("load", function () {
+            setTimeout(hideLoader, 700);
+        }, { once: true });
+    }
 
 });
