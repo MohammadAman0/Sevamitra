@@ -1,5 +1,10 @@
 import { db } from "./firebase.js";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+
+import {
+    collection,
+    addDoc,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
 const form = document.querySelector("form");
 
@@ -16,7 +21,7 @@ form.addEventListener("submit", async (event) => {
     const budget = form.elements["budget"].value;
 
     try {
-        await addDoc(collection(db, "bookings"), {
+        const docRef = await addDoc(collection(db, "bookings"), {
             name: name,
             mobile: mobile,
             service: service,
@@ -29,12 +34,20 @@ form.addEventListener("submit", async (event) => {
             createdAt: serverTimestamp()
         });
 
-        alert("Booking submitted successfully!");
+        console.log("Booking successful. ID:", docRef.id);
+
+        alert("Booking Successful! 🎉");
 
         form.reset();
 
     } catch (error) {
-        console.error("Booking error:", error);
-        alert("Booking submit nahi hui. Please try again.");
+
+        console.error("Booking Error:", error);
+
+        alert(
+            "Booking failed!\n\n" +
+            error.code + "\n" +
+            error.message
+        );
     }
 });
