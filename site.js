@@ -2,58 +2,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const loader = document.getElementById("sevaLoader");
 
-    if (loader) {
+    if (!loader) {
+        return;
+    }
 
-        window.addEventListener("load", () => {
+    // Loader sirf first website visit/open par show hoga
+    const alreadyVisited = sessionStorage.getItem("sevaMitraVisited");
 
-            setTimeout(() => {
+    if (alreadyVisited) {
 
-                loader.classList.add("loader-hidden");
+        loader.classList.add("loader-hidden");
 
-            }, 450);
-
-        });
+        return;
 
     }
 
+    // First visit
+    window.addEventListener("load", () => {
 
-    // Internal page transition
+        setTimeout(() => {
 
-    document.querySelectorAll("a").forEach((link) => {
+            loader.classList.add("loader-hidden");
 
-        const href = link.getAttribute("href");
+            sessionStorage.setItem(
+                "sevaMitraVisited",
+                "true"
+            );
 
-        if (!href) return;
-
-        if (
-            href.startsWith("#") ||
-            href.startsWith("tel:") ||
-            href.startsWith("mailto:") ||
-            href.startsWith("http")
-        ) {
-            return;
-        }
-
-
-        link.addEventListener("click", (event) => {
-
-            event.preventDefault();
-
-
-            if (loader) {
-
-                loader.classList.remove("loader-hidden");
-
-            }
-
-
-            setTimeout(() => {
-
-                window.location.href = href;
-
-            }, 350);
-
-        });
+        }, 700);
 
     });
 
