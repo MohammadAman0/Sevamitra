@@ -620,7 +620,11 @@ footer {
     .seva-loader-title {
 
         font-size: 23px;
-
+#sevaLoader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
     }
 
 }
