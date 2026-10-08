@@ -1,517 +1,232 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book a Service - SevaMitra</title>
+<title>Book a Service - SevaMitra</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-
-        /* =========================================
-           BOOKING PAGE ONLY
-           Does NOT affect index.html
-        ========================================= */
-
-        .sm-booking-page {
-            background: #f4f8fa;
-            min-height: 100vh;
-            padding: 60px 6%;
-        }
-
-        .sm-booking-card {
-            max-width: 850px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid #e2ecef;
-            border-radius: 18px;
-            padding: 40px;
-            box-shadow: 0 12px 35px rgba(10, 45, 65, 0.10);
-        }
-
-        .sm-booking-heading {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .sm-booking-heading h2 {
-            font-size: 36px;
-            color: #12364a;
-            margin: 0 0 10px 0;
-        }
-
-        .sm-booking-heading p {
-            color: #667d88;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0 auto;
-            max-width: 650px;
-        }
-
-        .sm-form-section {
-            margin-bottom: 32px;
-        }
-
-        .sm-form-title {
-            font-size: 20px;
-            color: #12364a;
-            margin: 0 0 18px 0;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e2ecef;
-        }
-
-        .sm-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .sm-form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .sm-form-group.sm-full {
-            grid-column: 1 / -1;
-        }
-
-        .sm-form-group label {
-            font-size: 14px;
-            font-weight: 700;
-            color: #17384a;
-            margin-bottom: 8px;
-        }
-
-        .sm-form-group input,
-        .sm-form-group select,
-        .sm-form-group textarea {
-            width: 100%;
-            padding: 13px 14px;
-            border: 1px solid #ccdce2;
-            border-radius: 8px;
-            font-size: 15px;
-            font-family: Arial, sans-serif;
-            color: #17384a;
-            background: #ffffff;
-            outline: none;
-            transition: 0.25s;
-        }
-
-        .sm-form-group input:focus,
-        .sm-form-group select:focus,
-        .sm-form-group textarea:focus {
-            border-color: #08b5b5;
-            box-shadow: 0 0 0 3px rgba(8, 181, 181, 0.10);
-        }
-
-        .sm-form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .sm-form-group input[type="file"] {
-            padding: 10px;
-            background: #f8fbfc;
-        }
-
-        .sm-required {
-            color: #e04b4b;
-        }
-
-        .sm-form-note {
-            font-size: 12px;
-            color: #788d96;
-            margin-top: 6px;
-        }
-
-        .sm-submit-area {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .sm-submit-button {
-            width: 100%;
-            max-width: 300px;
-            padding: 14px 25px;
-            margin: 0;
-            border: none;
-            border-radius: 8px;
-            background: #08b5b5;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .sm-submit-button:hover {
-            background: #078e9a;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-
-            .sm-booking-page {
-                padding: 35px 5%;
-            }
-
-            .sm-booking-card {
-                padding: 25px 18px;
-            }
-
-            .sm-booking-heading h2 {
-                font-size: 30px;
-            }
-
-            .sm-form-grid {
-                grid-template-columns: 1fr;
-                gap: 17px;
-            }
-
-            .sm-form-group.sm-full {
-                grid-column: auto;
-            }
-
-        }
-
-    </style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-
 <body>
 
+<header>
 
-    <!-- BOOKING HEADER -->
+<h1>SevaMitra</h1>
 
-    <header>
+<nav>
 
-        <h1>SevaMitra</h1>
+<a href="index.html">Home</a>
 
-        <nav>
+<a href="index.html#services">Services</a>
 
-            <a href="index.html">Home</a>
+<a href="booking.html">Book a Service</a>
 
-            <a href="index.html#services">Services</a>
+</nav>
 
-            <a href="booking.html">Book a Service</a>
+</header>
 
-        </nav>
+<main>
 
-    </header>
+<section>
 
+<h2>Book a Service</h2>
 
-    <!-- BOOKING PAGE -->
+<p>
+Tell us what work you need. Our team will contact you and arrange a suitable service professional.
+</p>
 
-    <main class="sm-booking-page">
+<form>
 
-        <div class="sm-booking-card">
+<div>
 
+<label>Your Name</label><br>
 
-            <div class="sm-booking-heading">
+<input
+type="text"
+name="name"
+placeholder="Enter your name"
+required
+>
 
-                <h2>Book a Service</h2>
+</div>
 
-                <p>
-                    Tell us what work you need. Our team will contact you
-                    and arrange a suitable service professional.
-                </p>
+<br>
 
-            </div>
+<div>
 
+<label>Mobile Number</label><br>
 
-            <form>
+<input
+type="tel"
+name="mobile"
+placeholder="Enter mobile number"
+required
+>
 
+</div>
 
-                <!-- YOUR DETAILS -->
+<br>
 
-                <div class="sm-form-section">
+<div>
 
-                    <h3 class="sm-form-title">
-                        1. Your Details
-                    </h3>
+<label>Select Service</label><br>
 
-                    <div class="sm-form-grid">
+<select name="service" required>
 
+<option value="">Select a service</option>
 
-                        <div class="sm-form-group">
+<option>Plumber</option>
 
-                            <label>
-                                Your Name
-                                <span class="sm-required">*</span>
-                            </label>
+<option>Electrician</option>
 
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Enter your name"
-                                required
-                            >
+<option>Carpenter</option>
 
-                        </div>
+<option>Home Cleaning</option>
 
+<option>Bathroom Cleaning</option>
 
-                        <div class="sm-form-group">
+<option>Laundry</option>
 
-                            <label>
-                                Mobile Number
-                                <span class="sm-required">*</span>
-                            </label>
+<option>AC Repair</option>
 
-                            <input
-                                type="tel"
-                                name="mobile"
-                                placeholder="Enter mobile number"
-                                required
-                            >
+<option>Appliance Repair</option>
 
-                        </div>
+<option>Other Home Service</option>
 
+</select>
 
-                    </div>
+</div>
 
-                </div>
+<br>
 
+<div>
 
-                <!-- SERVICE DETAILS -->
+<label>Describe Your Work</label><br>
 
-                <div class="sm-form-section">
+<textarea
+name="description"
+rows="5"
+placeholder="Example: Tap is leaking..."
+required
+>
+</textarea>
 
-                    <h3 class="sm-form-title">
-                        2. Service Details
-                    </h3>
+</div>
 
+<br>
 
-                    <div class="sm-form-grid">
+<div>
 
+<label>Service Address</label><br>
 
-                        <div class="sm-form-group">
+<textarea
+name="address"
+rows="4"
+placeholder="Enter your complete address"
+required
+>
+</textarea>
 
-                            <label>
-                                Select Service
-                                <span class="sm-required">*</span>
-                            </label>
+</div>
 
-                            <select
-                                name="service"
-                                required
-                            >
+<br>
 
-                                <option value="">
-                                    Select a service
-                                </option>
+<div>
 
-                                <option>Plumber</option>
+<label>Preferred Date & Time</label><br>
 
-                                <option>Electrician</option>
+<input
+type="datetime-local"
+name="preferred_time"
+required
+>
 
-                                <option>Carpenter</option>
+</div>
 
-                                <option>Home Cleaning</option>
+<br>
 
-                                <option>Bathroom Cleaning</option>
+<div>
 
-                                <option>Laundry</option>
+<label>Approximate Duration</label><br>
 
-                                <option>AC Repair</option>
+<select name="duration">
 
-                                <option>Appliance Repair</option>
+<option>Not sure</option>
 
-                                <option>Other Home Service</option>
+<option>Less than 1 hour</option>
 
-                            </select>
+<option>1–2 hours</option>
 
-                        </div>
+<option>2–4 hours</option>
 
+<option>More than 4 hours</option>
 
-                        <div class="sm-form-group">
+</select>
 
-                            <label>
-                                Approximate Duration
-                            </label>
+</div>
 
-                            <select name="duration">
+<br>
 
-                                <option>Not sure</option>
+<div>
 
-                                <option>Less than 1 hour</option>
+<label>Expected Budget (₹)</label><br>
 
-                                <option>1–2 hours</option>
+<input
+type="number"
+name="budget"
+min="100"
+placeholder="Enter your expected budget"
+>
 
-                                <option>2–4 hours</option>
+</div>
 
-                                <option>More than 4 hours</option>
+<br>
 
-                            </select>
+<div>
 
-                        </div>
+<label>Upload Problem Photo (Optional)</label><br>
 
+<input
+type="file"
+name="photo"
+accept="image/*"
+>
 
-                        <div class="sm-form-group sm-full">
+</div>
 
-                            <label>
-                                Describe Your Work
-                                <span class="sm-required">*</span>
-                            </label>
+<br>
 
-                            <textarea
-                                name="description"
-                                rows="5"
-                                placeholder="Example: Tap is leaking..."
-                                required
-                            ></textarea>
+<button type="submit">
+Submit Booking
+</button>
 
-                        </div>
+</form>
 
+</section>
 
-                        <div class="sm-form-group sm-full">
+</main>
 
-                            <label>
-                                Upload Problem Photo (Optional)
-                            </label>
+<footer>
 
-                            <input
-                                type="file"
-                                name="photo"
-                                accept="image/*"
-                            >
+<p>
+© 2026 SevaMitra. All rights reserved.
+</p>
 
-                            <span class="sm-form-note">
-                                A photo can help us understand the problem better.
-                            </span>
+</footer>
 
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-                <!-- SERVICE ADDRESS -->
-
-                <div class="sm-form-section">
-
-                    <h3 class="sm-form-title">
-                        3. Service Location
-                    </h3>
-
-
-                    <div class="sm-form-grid">
-
-                        <div class="sm-form-group sm-full">
-
-                            <label>
-                                Service Address
-                                <span class="sm-required">*</span>
-                            </label>
-
-                            <textarea
-                                name="address"
-                                rows="4"
-                                placeholder="Enter your complete address"
-                                required
-                            ></textarea>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- DATE AND BUDGET -->
-
-                <div class="sm-form-section">
-
-                    <h3 class="sm-form-title">
-                        4. Schedule & Budget
-                    </h3>
-
-
-                    <div class="sm-form-grid">
-
-
-                        <div class="sm-form-group">
-
-                            <label>
-                                Preferred Date & Time
-                                <span class="sm-required">*</span>
-                            </label>
-
-                            <input
-                                type="datetime-local"
-                                name="preferred_time"
-                                required
-                            >
-
-                        </div>
-
-
-                        <div class="sm-form-group">
-
-                            <label>
-                                Expected Budget (₹)
-                            </label>
-
-                            <input
-                                type="number"
-                                name="budget"
-                                min="100"
-                                placeholder="Enter your expected budget"
-                            >
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-                <!-- SUBMIT -->
-
-                <div class="sm-submit-area">
-
-                    <button
-                        type="submit"
-                        class="sm-submit-button"
-                    >
-                        Submit Booking
-                    </button>
-
-                </div>
-
-
-            </form>
-
-        </div>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 SevaMitra. All rights reserved.
-        </p>
-
-    </footer>
-
-
-    <script
-        type="module"
-        src="booking.js"
-    ></script>
-
+<script
+type="module"
+src="booking.js"
+></script>
 
 </body>
 
 </html>
+```
