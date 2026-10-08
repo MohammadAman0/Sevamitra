@@ -12,127 +12,363 @@
 <body>
 
 <header>
-    <h1>SevaMitra</h1>
+    <div class="logo-area">
+        <a href="index.html">
+            <img src="images/logo.png" alt="SevaMitra" class="brand-logo">
+        </a>
+    </div>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
         <a href="booking.html">Book a Service</a>
+        <a href="professional.html">Join as Professional</a>
     </nav>
 </header>
 
+
 <main>
 
-<section>
-    <h2>Book a Service</h2>
+<section class="booking-page">
 
-    <p>
-        Tell us what work you need. Our team will contact you
-        and arrange a suitable service professional.
-    </p>
+    <div class="booking-header">
 
-    <form>
+        <span class="booking-badge">
+            SEVAMITRA SERVICE
+        </span>
 
-        <div>
-            <label>Your Name</label><br>
-            <input type="text" name="name" placeholder="Enter your name" required>
-        </div>
+        <h1>Book a Service</h1>
 
-        <br>
+        <p>
+            Tell us what work you need. Share a few details and
+            our team will help arrange a suitable service professional.
+        </p>
 
-        <div>
-            <label>Mobile Number</label><br>
-            <input type="tel" name="mobile" placeholder="Enter mobile number" required>
-        </div>
+    </div>
 
-        <br>
 
-        <div>
-            <label>Select Service</label><br>
+    <!-- ₹49 OFFER MESSAGE -->
 
-            <select name="service" required>
-                <option value="">Select a service</option>
-                <option>Plumber</option>
-                <option>Electrician</option>
-                <option>Carpenter</option>
-                <option>Home Cleaning</option>
-                <option>Bathroom Cleaning</option>
-                <option>Laundry</option>
-                <option>AC Repair</option>
-                <option>Appliance Repair</option>
-                <option>Other Home Service</option>
-            </select>
-        </div>
+    <div class="booking-offer" id="offerBox">
 
-        <br>
+        <div class="offer-icon">₹</div>
 
         <div>
-            <label>Describe Your Work</label><br>
-            <textarea
-                name="description"
-                rows="5"
-                placeholder="Example: Tap is leaking..."
-                required>
-            </textarea>
+            <h3>SevaMitra Service Assistance</h3>
+
+            <p>
+                You are booking through our special ₹49 service assistance offer.
+                Final service charges will be confirmed after discussing the work
+                and requirements.
+            </p>
         </div>
 
-        <br>
+    </div>
 
-        <div>
-            <label>Service Address</label><br>
-            <textarea
-                name="address"
-                rows="4"
-                placeholder="Enter your complete address"
-                required>
-            </textarea>
+
+    <form class="booking-form">
+
+
+        <!-- PERSONAL DETAILS -->
+
+        <div class="form-section">
+
+            <div class="form-section-title">
+                <span>01</span>
+
+                <div>
+                    <h2>Personal Details</h2>
+                    <p>Tell us how we can contact you.</p>
+                </div>
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Your Name <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Mobile Number <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="mobile"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
         </div>
 
-        <br>
 
-        <div>
-            <label>Preferred Date & Time</label><br>
-            <input type="datetime-local" name="preferred_time" required>
+        <!-- SERVICE DETAILS -->
+
+        <div class="form-section">
+
+            <div class="form-section-title">
+
+                <span>02</span>
+
+                <div>
+                    <h2>Service Details</h2>
+                    <p>Tell us what service you need.</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Select Service <span>*</span>
+                </label>
+
+                <select name="service" required>
+
+                    <option value="">Choose a service</option>
+
+                    <option>Plumber</option>
+
+                    <option>Electrician</option>
+
+                    <option>Carpenter</option>
+
+                    <option>Home Cleaning</option>
+
+                    <option>Bathroom Cleaning</option>
+
+                    <option>Laundry</option>
+
+                    <option>AC Repair</option>
+
+                    <option>Appliance Repair</option>
+
+                    <option>Other Home Service</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Describe Your Work <span>*</span>
+                </label>
+
+                <textarea
+                    name="description"
+                    rows="5"
+                    placeholder="Example: Tap is leaking, switch is not working, fan needs repair..."
+                    required
+                ></textarea>
+
+                <small>
+                    Please provide as much detail as possible.
+                </small>
+
+            </div>
+
         </div>
 
-        <br>
 
-        <div>
-            <label>Approximate Duration</label><br>
+        <!-- ADDRESS & SCHEDULE -->
 
-            <select name="duration">
-                <option>Not sure</option>
-                <option>Less than 1 hour</option>
-                <option>1–2 hours</option>
-                <option>2–4 hours</option>
-                <option>More than 4 hours</option>
-            </select>
+        <div class="form-section">
+
+            <div class="form-section-title">
+
+                <span>03</span>
+
+                <div>
+                    <h2>Address & Schedule</h2>
+                    <p>Where and when do you need the service?</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Service Address <span>*</span>
+                </label>
+
+                <textarea
+                    name="address"
+                    rows="4"
+                    placeholder="House/Flat No., Street, Area, City, Pincode"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Preferred Date & Time <span>*</span>
+                    </label>
+
+                    <input
+                        type="datetime-local"
+                        name="preferred_time"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Approximate Duration
+                    </label>
+
+                    <select name="duration">
+
+                        <option>Not sure</option>
+
+                        <option>Less than 1 hour</option>
+
+                        <option>1–2 hours</option>
+
+                        <option>2–4 hours</option>
+
+                        <option>More than 4 hours</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <br>
 
-        <div>
-            <label>Expected Budget (₹)</label><br>
-            <input
-                type="number"
-                name="budget"
-                min="100"
-                placeholder="Enter your expected budget">
+        <!-- BUDGET & PHOTO -->
+
+        <div class="form-section">
+
+            <div class="form-section-title">
+
+                <span>04</span>
+
+                <div>
+                    <h2>Additional Information</h2>
+                    <p>Optional details that may help our team.</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Expected Budget (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        name="budget"
+                        min="0"
+                        placeholder="Optional"
+                    >
+
+                    <small>
+                        This is only an approximate expectation.
+                    </small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Problem Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        name="photo"
+                        accept="image/*"
+                        class="file-input"
+                    >
+
+                    <small>
+                        Optional
+                    </small>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <br>
 
-        <div>
-            <label>Upload Problem Photo (Optional)</label><br>
-            <input
-                type="file"
-                name="photo"
-                accept="image/*">
+        <!-- FINAL NOTE -->
+
+        <div class="booking-note">
+
+            <div class="booking-note-icon">✓</div>
+
+            <div>
+
+                <strong>What happens next?</strong>
+
+                <p>
+                    Our team will review your request and contact you.
+                    The final service price will be discussed and confirmed
+                    based on the actual work and requirements.
+                </p>
+
+            </div>
+
         </div>
 
-        <br>
 
-        <button type="submit">Submit Booking</button>
+        <!-- SUBMIT -->
+
+        <div class="booking-submit">
+
+            <button type="submit" class="booking-submit-btn">
+
+                <span>Submit Booking</span>
+
+                <span class="submit-arrow">→</span>
+
+            </button>
+
+            <p>
+                By submitting this form, you agree to be contacted by SevaMitra.
+            </p>
+
+        </div>
 
     </form>
 
@@ -140,10 +376,17 @@
 
 </main>
 
+
 <footer>
-    <p>© 2026 SevaMitra. All rights reserved.</p>
+
+    <p>
+        © 2026 SevaMitra. All rights reserved.
+    </p>
+
 </footer>
-<script type="module" src="booking.js"></script> 
-   
+
+
+<script type="module" src="booking.js"></script>
+
 </body>
 </html>
