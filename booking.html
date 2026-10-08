@@ -1,232 +1,482 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Book a Service - SevaMitra</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Book a Service - SevaMitra</title>
+    <style>
+        /* =========================
+           BOOKING PAGE ONLY
+        ========================= */
 
-<link rel="stylesheet" href="style.css">
+        .booking-page {
+            background: #f4f8fa;
+            min-height: 100vh;
+            padding: 60px 6%;
+        }
+
+        .booking-wrapper {
+            max-width: 850px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 12px 35px rgba(10, 45, 65, 0.10);
+            border: 1px solid #e2ecef;
+        }
+
+        .booking-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .booking-heading h2 {
+            font-size: 36px;
+            color: #12364a;
+            margin-bottom: 10px;
+        }
+
+        .booking-heading p {
+            color: #667d88;
+            font-size: 16px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section-title {
+            font-size: 20px;
+            color: #12364a;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2ecef;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #17384a;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #ccdce2;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            color: #17384a;
+            background: #ffffff;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #08b5b5;
+            box-shadow: 0 0 0 3px rgba(8, 181, 181, 0.10);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input[type="file"] {
+            padding: 10px;
+            background: #f8fbfc;
+            cursor: pointer;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: #788d96;
+            margin-top: 6px;
+        }
+
+        .submit-area {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .submit-booking {
+            width: 100%;
+            max-width: 300px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #08b5b5;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-booking:hover {
+            background: #078e9a;
+            transform: translateY(-2px);
+        }
+
+        .required {
+            color: #e04b4b;
+        }
+
+        @media (max-width: 768px) {
+
+            .booking-page {
+                padding: 35px 5%;
+            }
+
+            .booking-wrapper {
+                padding: 25px 18px;
+            }
+
+            .booking-heading h2 {
+                font-size: 30px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .form-group.full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<h1>SevaMitra</h1>
+        <h1>SevaMitra</h1>
 
-<nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="booking.html">Book a Service</a>
+        </nav>
 
-<a href="index.html">Home</a>
+    </header>
 
-<a href="index.html#services">Services</a>
 
-<a href="booking.html">Book a Service</a>
+    <main class="booking-page">
 
-</nav>
+        <div class="booking-wrapper">
 
-</header>
+            <div class="booking-heading">
 
-<main>
+                <h2>Book a Service</h2>
 
-<section>
+                <p>
+                    Tell us what service you need. Fill in the details below
+                    and our team will contact you to arrange a suitable
+                    service professional.
+                </p>
 
-<h2>Book a Service</h2>
+            </div>
 
-<p>
-Tell us what work you need. Our team will contact you and arrange a suitable service professional.
-</p>
 
-<form>
+            <form>
 
-<div>
 
-<label>Your Name</label><br>
+                <!-- YOUR DETAILS -->
 
-<input
-type="text"
-name="name"
-placeholder="Enter your name"
-required
->
+                <div class="form-section">
 
-</div>
+                    <h3 class="form-section-title">
+                        1. Your Details
+                    </h3>
 
-<br>
+                    <div class="form-grid">
 
-<div>
+                        <div class="form-group">
 
-<label>Mobile Number</label><br>
+                            <label>
+                                Your Name <span class="required">*</span>
+                            </label>
 
-<input
-type="tel"
-name="mobile"
-placeholder="Enter mobile number"
-required
->
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
 
-</div>
+                        </div>
 
-<br>
 
-<div>
+                        <div class="form-group">
 
-<label>Select Service</label><br>
+                            <label>
+                                Mobile Number <span class="required">*</span>
+                            </label>
 
-<select name="service" required>
+                            <input
+                                type="tel"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                required
+                            >
 
-<option value="">Select a service</option>
+                        </div>
 
-<option>Plumber</option>
+                    </div>
 
-<option>Electrician</option>
+                </div>
 
-<option>Carpenter</option>
 
-<option>Home Cleaning</option>
+                <!-- SERVICE DETAILS -->
 
-<option>Bathroom Cleaning</option>
+                <div class="form-section">
 
-<option>Laundry</option>
+                    <h3 class="form-section-title">
+                        2. Service Details
+                    </h3>
 
-<option>AC Repair</option>
+                    <div class="form-grid">
 
-<option>Appliance Repair</option>
 
-<option>Other Home Service</option>
+                        <div class="form-group">
 
-</select>
+                            <label>
+                                Select Service <span class="required">*</span>
+                            </label>
 
-</div>
+                            <select name="service" required>
 
-<br>
+                                <option value="">
+                                    Select a service
+                                </option>
 
-<div>
+                                <option>Plumber</option>
 
-<label>Describe Your Work</label><br>
+                                <option>Electrician</option>
 
-<textarea
-name="description"
-rows="5"
-placeholder="Example: Tap is leaking..."
-required
->
-</textarea>
+                                <option>Carpenter</option>
 
-</div>
+                                <option>Home Cleaning</option>
 
-<br>
+                                <option>Bathroom Cleaning</option>
 
-<div>
+                                <option>Laundry</option>
 
-<label>Service Address</label><br>
+                                <option>AC Repair</option>
 
-<textarea
-name="address"
-rows="4"
-placeholder="Enter your complete address"
-required
->
-</textarea>
+                                <option>Appliance Repair</option>
 
-</div>
+                                <option>Other Home Service</option>
 
-<br>
+                            </select>
 
-<div>
+                        </div>
 
-<label>Preferred Date & Time</label><br>
 
-<input
-type="datetime-local"
-name="preferred_time"
-required
->
+                        <div class="form-group">
 
-</div>
+                            <label>
+                                Approximate Duration
+                            </label>
 
-<br>
+                            <select name="duration">
 
-<div>
+                                <option>Not sure</option>
 
-<label>Approximate Duration</label><br>
+                                <option>Less than 1 hour</option>
 
-<select name="duration">
+                                <option>1–2 hours</option>
 
-<option>Not sure</option>
+                                <option>2–4 hours</option>
 
-<option>Less than 1 hour</option>
+                                <option>More than 4 hours</option>
 
-<option>1–2 hours</option>
+                            </select>
 
-<option>2–4 hours</option>
+                        </div>
 
-<option>More than 4 hours</option>
 
-</select>
+                        <div class="form-group full-width">
 
-</div>
+                            <label>
+                                Describe Your Work
+                                <span class="required">*</span>
+                            </label>
 
-<br>
+                            <textarea
+                                name="description"
+                                rows="5"
+                                placeholder="Example: Tap is leaking, bathroom pipe needs repair..."
+                                required
+                            ></textarea>
 
-<div>
+                        </div>
 
-<label>Expected Budget (₹)</label><br>
 
-<input
-type="number"
-name="budget"
-min="100"
-placeholder="Enter your expected budget"
->
+                        <div class="form-group full-width">
 
-</div>
+                            <label>
+                                Upload Problem Photo
+                            </label>
 
-<br>
+                            <input
+                                type="file"
+                                name="photo"
+                                accept="image/*"
+                            >
 
-<div>
+                            <span class="form-note">
+                                Optional — uploading a photo can help us understand the problem.
+                            </span>
 
-<label>Upload Problem Photo (Optional)</label><br>
+                        </div>
 
-<input
-type="file"
-name="photo"
-accept="image/*"
->
+                    </div>
 
-</div>
+                </div>
 
-<br>
 
-<button type="submit">
-Submit Booking
-</button>
+                <!-- LOCATION -->
 
-</form>
+                <div class="form-section">
 
-</section>
+                    <h3 class="form-section-title">
+                        3. Service Location
+                    </h3>
 
-</main>
+                    <div class="form-grid">
 
-<footer>
+                        <div class="form-group full-width">
 
-<p>
-© 2026 SevaMitra. All rights reserved.
-</p>
+                            <label>
+                                Service Address
+                                <span class="required">*</span>
+                            </label>
 
-</footer>
+                            <textarea
+                                name="address"
+                                rows="4"
+                                placeholder="Enter your complete service address"
+                                required
+                            ></textarea>
 
-<script
-type="module"
-src="booking.js"
-></script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCHEDULE & BUDGET -->
+
+                <div class="form-section">
+
+                    <h3 class="form-section-title">
+                        4. Schedule & Budget
+                    </h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Preferred Date & Time
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="datetime-local"
+                                name="preferred_time"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Expected Budget (₹)
+                            </label>
+
+                            <input
+                                type="number"
+                                name="budget"
+                                min="100"
+                                placeholder="Enter your expected budget"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-booking"
+                    >
+                        Submit Booking
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 SevaMitra. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="booking.js"
+    ></script>
 
 </body>
 
 </html>
-```
