@@ -1,0 +1,141 @@
+/* =========================================
+   SEVAMITRA BOOKING PAGE
+   This file affects ONLY booking.html
+========================================= */
+
+.booking-section {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e1eaee;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(10, 45, 65, 0.10);
+    text-align: left;
+}
+
+.booking-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #12364a;
+    margin-bottom: 10px;
+}
+
+.booking-intro {
+    text-align: center;
+    color: #667d88;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.booking-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-field:nth-child(4),
+.booking-field:nth-child(5),
+.booking-field:nth-child(9) {
+    grid-column: 1 / -1;
+}
+
+.booking-field label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #17384a;
+    margin-bottom: 8px;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #ccdce2;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #17384a;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.25s;
+}
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+    border-color: #08b5b5;
+    box-shadow: 0 0 0 3px rgba(8, 181, 181, 0.10);
+}
+
+.booking-field textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.booking-field input[type="file"] {
+    padding: 10px;
+    background: #f8fbfc;
+    cursor: pointer;
+}
+
+.booking-submit {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 280px;
+    margin: 8px auto 0;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #08b5b5;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-submit:hover {
+    background: #078e9a;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .booking-section {
+        margin: 30px 5%;
+        padding: 25px 18px;
+    }
+
+    .booking-section h2 {
+        font-size: 30px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .booking-field:nth-child(4),
+    .booking-field:nth-child(5),
+    .booking-field:nth-child(9) {
+        grid-column: auto;
+    }
+
+    .booking-submit {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+          }
