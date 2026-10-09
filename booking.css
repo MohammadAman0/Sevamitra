@@ -1,0 +1,99 @@
+/* BOOKING PAGE ONLY — Does not affect Home page */
+
+body:has(form) {
+background: #f4f8fa;
+}
+
+body:has(form) main section {
+max-width: 850px;
+margin: 40px auto;
+padding: 35px;
+background: #ffffff;
+border: 1px solid #e2ecef;
+border-radius: 18px;
+box-shadow: 0 10px 30px rgba(10, 45, 65, 0.08);
+text-align: left;
+}
+
+body:has(form) main section h2 {
+font-size: 32px;
+text-align: center;
+margin-bottom: 12px;
+}
+
+body:has(form) main section > p {
+text-align: center;
+color: #667d88;
+margin-bottom: 30px;
+}
+
+body:has(form) form label {
+display: inline-block;
+font-weight: 600;
+color: #17384a;
+margin-bottom: 6px;
+}
+
+body:has(form) form input:not([type="file"]),
+body:has(form) form select,
+body:has(form) form textarea {
+width: 100%;
+padding: 13px 14px;
+border: 1px solid #cddde3;
+border-radius: 8px;
+background: #ffffff;
+color: #172b3a;
+font-family: Arial, sans-serif;
+font-size: 15px;
+margin-top: 5px;
+}
+
+body:has(form) form textarea {
+resize: vertical;
+}
+
+body:has(form) form input:focus,
+body:has(form) form select:focus,
+body:has(form) form textarea:focus {
+outline: none;
+border-color: #08b5b5;
+box-shadow: 0 0 0 3px rgba(8, 181, 181, 0.12);
+}
+
+body:has(form) form input[type="file"] {
+display: block;
+margin-top: 8px;
+max-width: 100%;
+}
+
+body:has(form) form button[type="submit"] {
+display: block;
+width: 100%;
+margin-top: 25px;
+padding: 15px;
+border: none;
+border-radius: 8px;
+background: #08b5b5;
+color: white;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+body:has(form) form button[type="submit"]:hover {
+background: #078e9a;
+}
+
+@media (max-width: 600px) {
+body:has(form) main section {
+margin: 20px 12px;
+padding: 22px 16px;
+}
+
+```
+body:has(form) main section h2 {
+    font-size: 27px;
+}
+```
+
+}
