@@ -216,11 +216,14 @@ h2 {
 } 
 
 .offer-price { 
-    font-size: 50px; 
-    font-weight: 800; 
-    color: #08a6a6; 
-    line-height: 1.1; 
-    margin-top: 5px; 
+    font-size: clamp(18px, 3vw, 30px);
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 } 
 
 .offer-title { 
