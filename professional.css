@@ -1,0 +1,116 @@
+/* PROFESSIONAL REGISTRATION PAGE ONLY */
+
+body:has(#professionalForm) {
+background: #f2f7fa;
+color: #17384a;
+}
+
+body:has(#professionalForm) main {
+padding: 35px 16px 55px;
+}
+
+body:has(#professionalForm) main section {
+max-width: 850px;
+margin: 0 auto;
+padding: 35px;
+background: #ffffff;
+border: 1px solid #deeaef;
+border-radius: 20px;
+box-shadow: 0 14px 40px rgba(10, 45, 65, 0.09);
+text-align: left;
+}
+
+body:has(#professionalForm) main section h2 {
+text-align: center;
+font-size: 32px;
+margin-bottom: 10px;
+color: #12364a;
+}
+
+body:has(#professionalForm) main section > p {
+text-align: center;
+color: #667d88;
+margin-bottom: 28px;
+line-height: 1.7;
+}
+
+body:has(#professionalForm) #professionalForm label {
+display: block;
+margin: 16px 0 7px;
+font-size: 14px;
+font-weight: 700;
+color: #23485a;
+}
+
+body:has(#professionalForm) #professionalForm input:not([type="checkbox"]):not([type="file"]),
+body:has(#professionalForm) #professionalForm select,
+body:has(#professionalForm) #professionalForm textarea {
+display: block;
+width: 100%;
+padding: 13px 14px;
+border: 1px solid #cedee5;
+border-radius: 9px;
+background: #fbfdfe;
+color: #17384a;
+font: 15px Arial, sans-serif;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+body:has(#professionalForm) #professionalForm textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+body:has(#professionalForm) #professionalForm input:focus,
+body:has(#professionalForm) #professionalForm select:focus,
+body:has(#professionalForm) #professionalForm textarea:focus {
+outline: none;
+border-color: #08b5b5;
+box-shadow: 0 0 0 3px rgba(8, 181, 181, 0.13);
+background: #ffffff;
+}
+
+body:has(#professionalForm) #professionalForm input[type="file"] {
+display: block;
+max-width: 100%;
+margin-top: 8px;
+}
+
+body:has(#professionalForm) #professionalForm button[type="submit"] {
+display: block;
+width: 100%;
+margin-top: 28px;
+padding: 15px 20px;
+border: none;
+border-radius: 10px;
+background: linear-gradient(135deg, #08b5b5, #078e9a);
+color: #ffffff;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+box-shadow: 0 7px 18px rgba(8, 181, 181, 0.2);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+body:has(#professionalForm) #professionalForm button[type="submit"]:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 22px rgba(8, 181, 181, 0.28);
+}
+
+@media (max-width: 600px) {
+body:has(#professionalForm) main {
+padding: 20px 10px 35px;
+}
+
+```
+body:has(#professionalForm) main section {
+    padding: 24px 17px;
+    border-radius: 15px;
+}
+
+body:has(#professionalForm) main section h2 {
+    font-size: 26px;
+}
+```
+
+}
