@@ -437,9 +437,12 @@ footer {
         font-size: 28px; 
     } 
 
-    .offer-price { 
-        font-size: 42px; 
-    } 
+    .offer-price {
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 800;
+    color: #087f8c;
+    overflow-wrap: anywhere;
+}
 
     .offer-title { 
         font-size: 18px; 
