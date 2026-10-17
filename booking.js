@@ -7,6 +7,10 @@ import {
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore.js";
 
+const SERVICE_ID = "service_haimgap";
+const TEMPLATE_ID = "template_whqu6ea";
+const PUBLIC_KEY = "rhrllDN-A9Sp_Qys_";
+
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (event) => {
