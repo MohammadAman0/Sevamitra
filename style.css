@@ -464,3 +464,37 @@ footer {
         font-size: 30px; 
     } 
 }
+
+.seva-top-strip {
+  width: 100%;
+  background: #071D32;
+  color: #ffffff;
+  overflow: hidden;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px solid #35D6CF;
+}
+
+.seva-top-text {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: sevaGlow 3s ease-in-out infinite alternate;
+}
+
+.seva-top-text span {
+  color: #35D6CF;
+  margin: 0 8px;
+}
+
+@keyframes sevaGlow {
+  from { text-shadow: 0 0 2px #35D6CF; }
+  to { text-shadow: 0 0 10px #35D6CF; }
+}
+
+@media (max-width: 600px) {
+  .seva-top-strip { padding: 8px 0; }
+  .seva-top-text { font-size: 10px; letter-spacing: 0; }
+}
