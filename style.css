@@ -495,3 +495,172 @@ footer {
   }
 }
   
+/* HOW IT WORKS SECTION */
+
+.how-it-works {
+    padding: 65px 6%;
+    background: #f3f7fc;
+}
+
+.how-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.how-heading h2 {
+    color: #173a78;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.how-underline {
+    width: 65px;
+    height: 5px;
+    background: #35d6cf;
+    border-radius: 10px;
+    margin: 0 auto 18px;
+}
+
+.how-heading p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+.how-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.how-card {
+    position: relative;
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid #e4eaf2;
+    box-shadow: 0 8px 25px rgba(20, 50, 90, 0.08);
+    overflow: hidden;
+    min-height: 175px;
+}
+
+.how-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--step-color);
+}
+
+.step-blue {
+    --step-color: #2856c5;
+}
+
+.step-purple {
+    --step-color: #8538df;
+}
+
+.step-green {
+    --step-color: #159b55;
+}
+
+.step-orange {
+    --step-color: #e58a19;
+}
+
+.how-icon {
+    width: 62px;
+    height: 62px;
+    background: var(--step-color);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    margin-bottom: 18px;
+}
+
+.how-info span {
+    color: var(--step-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.how-info h3 {
+    color: #173a78;
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.how-card p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.how-number {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 65px;
+    font-weight: 800;
+    color: var(--step-color);
+    opacity: 0.09;
+}
+
+.how-book {
+    text-align: center;
+    margin: 40px auto 0;
+    padding: 30px 15px;
+    max-width: 750px;
+    background: #071d32;
+    border-radius: 18px;
+    color: white;
+}
+
+.how-book h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.how-book p {
+    color: #d4e0ec;
+    margin-bottom: 22px;
+}
+
+.how-book a {
+    display: inline-block;
+    background: #08b8b5;
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+@media (max-width: 650px) {
+    .how-it-works {
+        padding: 45px 5%;
+    }
+
+    .how-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .how-heading h2 {
+        font-size: 27px;
+    }
+
+    .how-card {
+        padding: 24px;
+    }
+
+    .how-info h3 {
+        font-size: 19px;
+    }
+}
