@@ -664,3 +664,75 @@ footer {
         font-size: 19px;
     }
 }
+
+/* HOW IT WORKS - MOBILE AND DESKTOP FIX */
+
+.how-it-works .how-steps {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 25px !important;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.how-it-works .how-card {
+    display: block !important;
+    position: relative !important;
+    background: #ffffff !important;
+    padding: 28px !important;
+    border: 1px solid #dce5ef !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 25px rgba(20,50,90,0.10) !important;
+    min-height: 220px;
+    text-align: left !important;
+    overflow: hidden;
+}
+
+.how-it-works .how-card::before {
+    content: "" !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--step-color) !important;
+}
+
+.how-it-works .how-icon {
+    width: 65px !important;
+    height: 65px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: var(--step-color) !important;
+    border-radius: 17px;
+    font-size: 30px !important;
+    margin-bottom: 18px;
+}
+
+.how-it-works .how-info span {
+    display: block;
+    color: var(--step-color) !important;
+}
+
+.how-it-works .how-info h3 {
+    color: #173a78 !important;
+    font-size: 21px;
+}
+
+.how-it-works .how-card p {
+    color: #64748b !important;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left !important;
+}
+
+@media (max-width: 650px) {
+    .how-it-works .how-steps {
+        grid-template-columns: 1fr !important;
+    }
+
+    .how-it-works .how-card {
+        min-height: 200px;
+    }
+}
