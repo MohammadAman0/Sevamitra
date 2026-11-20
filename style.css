@@ -736,3 +736,73 @@ footer {
         min-height: 200px;
     }
 }
+
+/* SevaMitra Offer Section - Light Blue Background */
+
+.seva-offer {
+    background: linear-gradient(
+        135deg,
+        #e8faff 0%,
+        #d9f3f5 50%,
+        #eefaff 100%
+    );
+
+    padding: 45px 20px;
+    border-radius: 25px;
+    margin: 30px auto;
+    border: 1px solid #cce9ee;
+    box-shadow: 0 8px 25px rgba(0, 65, 90, 0.08);
+}
+
+.offer-content {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 22px;
+    padding: 35px 25px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.offer-badge {
+    background: #d9f5f5;
+    color: #087f8c;
+    border-radius: 30px;
+    padding: 12px 22px;
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.offer-content h2 {
+    color: #073b59;
+}
+
+.offer-price {
+    color: #078b91;
+    font-weight: bold;
+}
+
+.offer-title {
+    color: #073b59;
+    font-weight: 600;
+}
+
+.offer-description {
+    color: #647985;
+    line-height: 1.8;
+}
+
+.offer-button {
+    background: #073b59;
+    color: white;
+    padding: 15px 38px;
+    border-radius: 12px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.offer-button:hover {
+    background: #f58220;
+}
