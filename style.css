@@ -747,4 +747,28 @@ footer {
         min-height: 200px;
     }
 }
+/* SEVAMITRA OFFER BACKGROUND FINAL FIX */
 
+html body main section.seva-offer {
+    background: linear-gradient(
+        120deg,
+        #d9f7f7 0%,
+        #dceeff 50%,
+        #eafaff 100%
+    ) !important;
+
+    padding: 55px 7% !important;
+}
+
+html body main section.seva-offer .offer-content {
+    background: linear-gradient(
+        135deg,
+        #c9f1f3 0%,
+        #d4eaff 50%,
+        #e6faff 100%
+    ) !important;
+
+    border: 1px solid #a9dce8 !important;
+    border-radius: 25px !important;
+    box-shadow: 0 12px 35px rgba(10, 65, 85, 0.15) !important;
+}
