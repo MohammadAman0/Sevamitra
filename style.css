@@ -171,93 +171,104 @@ h2 {
 } 
 
 /* ₹49 OFFER */
-.seva-offer { 
-    background: #f4f8fa; 
-    padding: 55px 7%; 
-} 
 
-.offer-content { 
-    max-width: 850px; 
-    margin: auto; 
-    padding: 40px 30px; 
-    background: #ffffff; 
-    border: 1px solid #dcecef; 
-    border-radius: 22px; 
-    box-shadow: 0 12px 35px rgba(10, 45, 65, 0.10); 
-    position: relative; 
-    overflow: hidden; 
-} 
+/* SEVAMITRA SERVICE OFFER */
 
-.offer-content::before { 
-    content: ""; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 5px; 
-    background: linear-gradient(90deg, #08b5b5, #078e9a); 
-} 
+.seva-offer {
+    background: #eaf8fa !important;
+    padding: 55px 7%;
+    border-radius: 25px;
+}
 
-.offer-badge { 
-    display: inline-block; 
-    padding: 7px 15px; 
-    border-radius: 20px; 
-    background: #e6f8f8; 
-    color: #087f8c; 
-    font-size: 12px; 
-    font-weight: 800; 
-    letter-spacing: 1px; 
-} 
+.seva-offer .offer-content {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px 30px;
 
-.offer-content h2 { 
-    margin-top: 15px; 
-    margin-bottom: 5px; 
-    color: #12364a; 
-} 
+    /* Main Background */
+    background: linear-gradient(
+        135deg,
+        #e0f7f8 0%,
+        #d8eff8 50%,
+        #edfaff 100%
+    ) !important;
+
+    border: 1px solid #c5e8ed;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(10, 65, 85, 0.12);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #08b5b5, #078e9a);
+}
+
+.offer-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: #c9f0f0;
+    color: #087f8c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.offer-content h2 {
+    margin-top: 20px;
+    color: #12364a;
+}
 
 .offer-price {
     font-size: clamp(18px, 3vw, 30px);
-    line-height: 1.4;
-    text-align: center;
-    overflow-wrap: anywhere;
-    max-width: 100%;
-    box-sizing: border-box;
     font-weight: 800;
     color: #087f8c;
-    padding: 8px 0;
+    padding: 10px 0;
 }
-.offer-title { 
-    font-size: 20px; 
-    font-weight: 700; 
-    color: #153b50; 
-    margin-top: 8px; 
-} 
 
-.offer-description { 
-    max-width: 650px; 
-    margin: 10px auto 0; 
-    color: #667d88; 
-    font-size: 15px; 
-} 
+.offer-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #153b50;
+    margin-top: 10px;
+}
 
-.offer-button { 
-    display: inline-block; 
-    margin-top: 22px; 
-    padding: 12px 30px; 
-    border-radius: 8px; 
-    background: #06344d; 
-    color: #ffffff; 
-    text-decoration: none; 
-    font-weight: 700; 
-    transition: 0.3s; 
-} 
+.offer-description {
+    max-width: 650px;
+    margin: 12px auto 0;
+    color: #526d7b;
+    font-size: 16px;
+    line-height: 1.8;
+}
 
-.offer-button:hover { 
-    background: #087f8c; 
-    color: #ffffff; 
-    transform: translateY(-2px); 
-} 
+.offer-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 35px;
+    border-radius: 12px;
+    background: #06344d;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
 
+.offer-button:hover {
+    background: #f58220;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+   
 /* SERVICES */
 #services { 
     background: #ffffff; 
@@ -737,72 +748,3 @@ footer {
     }
 }
 
-/* SevaMitra Offer Section - Light Blue Background */
-
-.seva-offer {
-    background: linear-gradient(
-        135deg,
-        #e8faff 0%,
-        #d9f3f5 50%,
-        #eefaff 100%
-    );
-
-    padding: 45px 20px;
-    border-radius: 25px;
-    margin: 30px auto;
-    border: 1px solid #cce9ee;
-    box-shadow: 0 8px 25px rgba(0, 65, 90, 0.08);
-}
-
-.offer-content {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 22px;
-    padding: 35px 25px;
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-}
-
-.offer-badge {
-    background: #d9f5f5;
-    color: #087f8c;
-    border-radius: 30px;
-    padding: 12px 22px;
-    display: inline-block;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.offer-content h2 {
-    color: #073b59;
-}
-
-.offer-price {
-    color: #078b91;
-    font-weight: bold;
-}
-
-.offer-title {
-    color: #073b59;
-    font-weight: 600;
-}
-
-.offer-description {
-    color: #647985;
-    line-height: 1.8;
-}
-
-.offer-button {
-    background: #073b59;
-    color: white;
-    padding: 15px 38px;
-    border-radius: 12px;
-    display: inline-block;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.offer-button:hover {
-    background: #f58220;
-}
