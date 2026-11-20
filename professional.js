@@ -1,3 +1,4 @@
+
 import { db } from "./firebase.js";
 
 import {
@@ -13,54 +14,71 @@ const PUBLIC_KEY = "rhrllDN-A9Sp_Qys_";
 const form = document.getElementById("professionalForm");
 
 form.addEventListener("submit", async (event) => {
-
     event.preventDefault();
 
-    const name = form.elements["name"].value;
-    const mobile = form.elements["mobile"].value;
-    const email = form.elements["email"].value;
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+
+    const name = form.elements["name"].value.trim();
+    const mobile = form.elements["mobile"].value.trim();
+    const email = form.elements["email"].value.trim();
     const service = form.elements["service"].value;
     const experience = form.elements["experience"].value;
-    const city = form.elements["city"].value;
-    const address = form.elements["address"].value;
-    const skills = form.elements["skills"].value;
+    const city = form.elements["city"].value.trim();
+    const address = form.elements["address"].value.trim();
+    const skills = form.elements["skills"].value.trim();
 
     try {
+        await addDoc(collection(db, "professionalApplications"), {
+            name,
+            mobile,
+            email,
+            service,
+            experience,
+            city,
+            address,
+            skills,
+            status: "Pending",
+            createdAt: serverTimestamp()
+        });
 
-        await addDoc(
-            collection(db, "professionalApplications"),
-            {
-                name: name,
-                mobile: mobile,
-                email: email,
-                service: service,
-                experience: experience,
-                city: city,
-                address: address,
-                skills: skills,
-                status: "Pending",
-                createdAt: serverTimestamp()
+        try {
+            if (!window.emailjs) {
+                throw new Error("EmailJS SDK not loaded.");
             }
-        );
 
-        alert("Registration submitted successfully! 🎉");
+            await window.emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                {
+                    name,
+                    mobile,
+                    email,
+                    service,
+                    experience,
+                    city,
+                    address,
+                    skills
+                },
+                { publicKey: PUBLIC_KEY }
+            );
+
+            alert("Registration successful! 🎉 Email notification sent.");
+
+        } catch (emailError) {
+            console.error("EmailJS error:", emailError);
+
+            alert("Registration saved successfully! 🎉\nEmail notification failed.");
+        }
 
         form.reset();
 
     } catch (error) {
+        console.error("Professional registration error:", error);
 
-        console.error(
-            "Professional registration error:",
-            error
-        );
+        alert("Registration failed!\n" + error.message);
 
-        alert(
-            "Registration failed!\n\n" +
-            error.code +
-            "\n" +
-            error.message
-        );
-
+    } finally {
+        button.disabled = false;
     }
-
 });
