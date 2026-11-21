@@ -174,8 +174,16 @@ h2 {
 
 /* SEVAMITRA SERVICE OFFER */
 
+
+/* SEVAMITRA SERVICE OFFER */
+
 .seva-offer {
-    background: #eaf8fa !important;
+    background: linear-gradient(
+        120deg,
+        #9ce9e9,
+        #a9dafa,
+        #b8eaff
+    ) !important;
     padding: 55px 7%;
     border-radius: 25px;
 }
@@ -184,18 +192,15 @@ h2 {
     max-width: 850px;
     margin: auto;
     padding: 45px 30px;
-
-    /* Main Background */
     background: linear-gradient(
         135deg,
-        #e0f7f8 0%,
-        #d8eff8 50%,
-        #edfaff 100%
+        #b9eeee,
+        #a8dafa,
+        #c9edff
     ) !important;
-
-    border: 1px solid #c5e8ed;
+    border: 2px solid #75cbdc;
     border-radius: 25px;
-    box-shadow: 0 12px 35px rgba(10, 65, 85, 0.12);
+    box-shadow: 0 12px 35px rgba(10, 65, 85, 0.18);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -208,7 +213,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 6px;
-    background: linear-gradient(90deg, #08b5b5, #078e9a);
+    background: #078e9a;
 }
 
 .offer-badge {
@@ -746,29 +751,4 @@ footer {
     .how-it-works .how-card {
         min-height: 200px;
     }
-}
-/* SEVAMITRA OFFER BACKGROUND FINAL FIX */
-
-html body main section.seva-offer {
-    background: linear-gradient(
-        120deg,
-        #d9f7f7 0%,
-        #dceeff 50%,
-        #eafaff 100%
-    ) !important;
-
-    padding: 55px 7% !important;
-}
-
-html body main section.seva-offer .offer-content {
-    background: linear-gradient(
-        135deg,
-        #c9f1f3 0%,
-        #d4eaff 50%,
-        #e6faff 100%
-    ) !important;
-
-    border: 1px solid #a9dce8 !important;
-    border-radius: 25px !important;
-    box-shadow: 0 12px 35px rgba(10, 65, 85, 0.15) !important;
 }
