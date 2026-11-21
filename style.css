@@ -752,3 +752,10 @@ footer {
         min-height: 200px;
     }
 }
+.seva-offer {
+    background: red !important;
+}
+
+.seva-offer .offer-content {
+    background: yellow !important;
+}
