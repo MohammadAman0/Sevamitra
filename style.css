@@ -765,3 +765,149 @@ footer {
         font-size: 48px;
     }
 }
+
+/* SEVAMITRA OFFER DESIGN */
+
+.seva-offer {
+    padding: 45px 20px;
+    background: #f4f8fa;
+}
+
+.offer-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 38px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: linear-gradient(120deg, #082b46, #087f91);
+    border-radius: 22px;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.offer-left {
+    flex: 1;
+}
+
+.offer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.offer-badge {
+    display: inline-block;
+    padding: 7px 14px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.offer-content h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.offer-price {
+    color: #ffcf70;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.offer-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.offer-description {
+    color: #e8f3f7;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 22px;
+}
+
+.offer-button {
+    display: inline-block;
+    background: #ffbd45;
+    color: #102d40;
+    padding: 12px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.offer-button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.offer-right {
+    width: 230px;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-side-logo {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 768px) {
+
+    .seva-offer {
+        padding: 25px 14px;
+    }
+
+    .offer-content {
+        padding: 25px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .offer-content h2 {
+        font-size: 25px;
+    }
+
+    .offer-price {
+        font-size: 20px;
+    }
+
+    .offer-description {
+        font-size: 14px;
+    }
+
+    .offer-right {
+        width: 100%;
+    }
+
+    .offer-side-logo {
+        width: 125px;
+        height: 125px;
+    }
+}
