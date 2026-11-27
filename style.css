@@ -911,3 +911,141 @@ footer {
         height: 125px;
     }
 }
+
+/* =========================
+   SEVAMITRA FAQ SECTION
+========================= */
+
+.sm-faq {
+    padding: 60px 6%;
+    background: #f4f8fa;
+}
+
+.sm-faq h2 {
+    text-align: center;
+    color: #073448;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle {
+    text-align: center;
+    color: #507080;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #dce8e8;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #087b73;
+}
+
+.faq-item summary {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #073448;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    color: #087b73;
+    font-size: 25px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item[open] {
+    border-left: 4px solid #087b73;
+}
+
+.faq-item[open] summary {
+    background: #e8f5f3;
+}
+
+.faq-item p {
+    padding: 18px 20px;
+    color: #405563;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.faq-contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.faq-contact p {
+    color: #507080;
+    margin-bottom: 12px;
+}
+
+.faq-contact a {
+    display: inline-block;
+    background: #087b73;
+    color: #ffffff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.faq-contact a:hover {
+    background: #073448;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .sm-faq {
+        padding: 35px 4%;
+    }
+
+    .sm-faq h2 {
+        font-size: 24px;
+    }
+
+    .faq-subtitle {
+        font-size: 13px;
+    }
+
+    .faq-item summary {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .faq-item p {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+}
