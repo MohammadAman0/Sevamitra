@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Feedback | SevaMitra</title>
+
+    <link rel="icon" type="image/png"
+          href="images/favicon.png">
+
+    <link rel="stylesheet" href="feedback.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html">
+        <img src="images/logo.png"
+             alt="SevaMitra Logo"
+             class="brand-logo">
+    </a>
+
+    <p>Har Kaam, Ek Trusted Mitra</p>
+
+</header>
+
+<section class="feedback-hero">
+
+    <h1>Customer Feedback</h1>
+
+    <p>Your experience matters to us!</p>
+
+</section>
+
+<main class="feedback-container">
+
+    <form id="feedbackForm">
+
+        <h2>Share Your Experience</h2>
+
+        <p class="form-subtitle">
+            Help us improve our services.
+        </p>
+
+        <label for="name">Full Name *</label>
+
+        <input type="text"
+               id="name"
+               name="name"
+               placeholder="Enter your name"
+               maxlength="60"
+               required>
+
+        <label for="mobile">Mobile Number *</label>
+
+        <input type="tel"
+               id="mobile"
+               name="mobile"
+               placeholder="Enter mobile number"
+               pattern="[6-9][0-9]{9}"
+               maxlength="10"
+               inputmode="numeric"
+               required>
+
+        <label for="service">Select Service *</label>
+
+        <select id="service" name="service" required>
+
+            <option value="">Select your service</option>
+
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Home Cleaning</option>
+            <option>Geyser Repair</option>
+            <option>Appliance Repair</option>
+            <option>Car / Bike Wash</option>
+            <option>Mobile Repairing</option>
+            <option>Solar Panel Services</option>
+            <option>Online Services</option>
+            <option>Other</option>
+
+        </select>
+
+        <label>Rate Your Experience *</label>
+
+        <div class="rating-stars" id="ratingStars">
+
+            <button type="button" data-rating="1"
+                    aria-label="1 star"
+                    aria-pressed="false">★</button>
+
+            <button type="button" data-rating="2"
+                    aria-label="2 stars"
+                    aria-pressed="false">★</button>
+
+            <button type="button" data-rating="3"
+                    aria-label="3 stars"
+                    aria-pressed="false">★</button>
+
+            <button type="button" data-rating="4"
+                    aria-label="4 stars"
+                    aria-pressed="false">★</button>
+
+            <button type="button" data-rating="5"
+                    aria-label="5 stars"
+                    aria-pressed="false">★</button>
+
+        </div>
+
+        <input type="hidden"
+               id="selectedRating"
+               name="rating"
+               value="0">
+
+        <p id="ratingText">Select your rating</p>
+
+        <label for="feedback">Your Feedback *</label>
+
+        <textarea id="feedback"
+                  name="feedback"
+                  rows="5"
+                  maxlength="1000"
+                  placeholder="Share your experience with SevaMitra..."
+                  required></textarea>
+
+        <label class="consent">
+
+            <input type="checkbox"
+                   name="publishConsent"
+                   required>
+
+            <span>
+                I agree that my name, rating and review
+                may be displayed publicly after approval.
+            </span>
+
+        </label>
+
+        <p class="privacy-note">
+
+            Your mobile number will not be displayed publicly.
+
+            Read our
+            <a href="privacy.html" target="_blank"
+               rel="noopener noreferrer">
+                Privacy Policy
+            </a>.
+
+        </p>
+
+        <button type="submit"
+                class="submit-btn"
+                disabled>
+
+            Submit Feedback
+
+        </button>
+
+        <p id="feedbackMessage" role="status"></p>
+
+    </form>
+
+    <a href="index.html" class="back-home">
+        ← Back to Home
+    </a>
+
+</main>
+
+<footer>
+
+    <p>SevaMitra – Har Kaam, Ek Trusted Mitra</p>
+
+    <p>© 2026 SevaMitra. All Rights Reserved.</p>
+
+</footer>
+
+<script type="module" src="feedback.js"></script>
+
+</body>
+
+</html>
