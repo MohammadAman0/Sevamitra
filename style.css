@@ -1158,3 +1158,208 @@ footer {
     }
 
 }
+/* =========================
+   CUSTOMER FEEDBACK SECTION
+========================= */
+
+.sm-feedback {
+    padding: 50px 6%;
+    background: #ffffff;
+    text-align: center;
+}
+
+.sm-feedback h2 {
+    font-size: 30px;
+    color: #073448;
+    margin-bottom: 10px;
+}
+
+.feedback-subtitle {
+    color: #507080;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.feedback-stars {
+    color: #f4b400;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.feedback-btn,
+.feedback-submit {
+    background: #087b73;
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback-btn:hover,
+.feedback-submit:hover {
+    background: #073448;
+}
+
+.feedback-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* FEEDBACK POPUP */
+
+.feedback-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 90%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    color: #172b3a;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.feedback-dialog::backdrop {
+    background: rgba(0,0,0,0.65);
+}
+
+.feedback-dialog h2 {
+    color: #073448;
+    font-size: 23px;
+    margin-bottom: 8px;
+    padding-right: 20px;
+}
+
+.feedback-dialog p {
+    color: #507080;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.feedback-close {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #507080;
+    cursor: pointer;
+}
+
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#feedbackForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #073448;
+}
+
+#feedbackForm input:not([type="checkbox"]),
+#feedbackForm select,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce8e8;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #f9fbfc;
+}
+
+#feedbackForm textarea {
+    resize: vertical;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rating-stars button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #d5dce0;
+    font-size: 36px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rating-stars button.active {
+    color: #f4b400;
+}
+
+#ratingText {
+    text-align: center;
+}
+
+#feedbackMessage {
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+
+#feedbackForm .review-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.customer-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 25px auto 0;
+}
+
+.review-card {
+    background: #f4f8fa;
+    border: 1px solid #e5edf0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.review-card h3 {
+    color: #073448;
+}
+
+.review-card .review-rating {
+    color: #b77900;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+
+    .sm-feedback {
+        padding: 35px 5%;
+    }
+
+    .sm-feedback h2 {
+        font-size: 24px;
+    }
+
+    .feedback-dialog {
+        padding: 20px;
+    }
+
+}
