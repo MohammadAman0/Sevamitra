@@ -1,0 +1,216 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fa;
+    color: #172b3a;
+    line-height: 1.6;
+}
+
+header {
+    background: #ffffff;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 1px solid #e5edf0;
+}
+
+.brand-logo {
+    width: 150px;
+    height: auto;
+}
+
+header p {
+    font-size: 14px;
+    color: #507080;
+}
+
+.feedback-hero {
+    background: linear-gradient(135deg, #073448, #087b73);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.feedback-hero h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.feedback-container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+#feedbackForm {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5edf0;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+#feedbackForm h2 {
+    text-align: center;
+    color: #073448;
+    font-size: 24px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #507080;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+#feedbackForm label {
+    display: block;
+    color: #073448;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#feedbackForm input:not([type="checkbox"]),
+#feedbackForm select,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce8e8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #f9fbfc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#feedbackForm input:focus,
+#feedbackForm select:focus,
+#feedbackForm textarea:focus {
+    border-color: #087b73;
+}
+
+#feedbackForm textarea {
+    resize: vertical;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.rating-stars button {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #d5dce0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rating-stars button.active {
+    color: #f4b400;
+}
+
+#ratingText {
+    text-align: center;
+    color: #507080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#feedbackForm .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.consent input {
+    margin-top: 4px;
+    accent-color: #087b73;
+}
+
+.privacy-note {
+    font-size: 12px;
+    color: #507080;
+    margin: 15px 0;
+}
+
+.privacy-note a {
+    color: #087b73;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #087b73;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #073448;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#feedbackMessage {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.back-home {
+    display: block;
+    text-align: center;
+    color: #087b73;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 25px 0;
+}
+
+footer {
+    background: #073448;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .feedback-hero h1 {
+        font-size: 25px;
+    }
+
+    #feedbackForm {
+        padding: 20px;
+    }
+
+    #feedbackForm h2 {
+        font-size: 21px;
+    }
+
+    .rating-stars button {
+        font-size: 35px;
+    }
+
+}
